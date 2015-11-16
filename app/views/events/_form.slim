@@ -1,0 +1,22 @@
+.row
+  .col-sm-12
+    = simple_form_for(@event) do |f|
+      .col-sm-6
+        = f.input :title
+      .col-sm-6
+        = f.input :repeats, include_blank: false
+      .col-sm-6
+        = f.input :starts_at
+      .col-sm-6
+        = f.input :ends_at
+      .col-sm-12
+        = f.input :description
+      .col-sm-12
+        = f.submit 'Сохранить', class: 'btn btn-large btn-primary'
+    .col-sm-12
+      .btn-group
+        = link_to 'Назад', calendar_path, class: 'btn btn-primary'
+        - if @event.persisted?
+          = link_to 'Удалить событие', @event, data: { confirm: 'Вы уверены?' }, method: :delete,
+            class: 'btn btn-danger'
+

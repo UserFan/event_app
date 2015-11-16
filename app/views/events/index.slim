@@ -1,0 +1,27 @@
+= link_to 'Создать событие', new_event_path, class: 'btn btn-primary'
+
+- if @events.any?
+  table.table.table-bordered.table-hover.table-condensed.table-responsive
+    thead
+      tr
+        th Название
+        th Начало
+        th Конец
+        th Повтор
+        th Описание
+        th
+    tbody
+      - @events.each do |event|
+        tr
+          th = event.title
+          th = l(event.starts_at)
+          th = l(event.ends_at)
+          th = event.repeats
+          th = event.description
+          td.text-center
+            .btn-group
+              = link_to edit_event_path(event), class: 'btn btn-warning btn-md'
+                span.glyphicon.glyphicon-edit
+              = link_to event_path(event), class: 'btn btn-danger btn-md', method: :delete,
+                data: { confirm: 'Вы уверены?' }
+                span.glyphicon.glyphicon-remove

@@ -1,0 +1,84 @@
+ru:
+  simple_form:
+    labels:
+      event:
+        title: 'Название'
+        description: 'Описание'
+        starts_at: 'Начинается'
+        ends_at: 'Заканчивается'
+        repeats: 'Повтор'
+      user:
+        new:
+          username: 'Полное имя'
+          email: "Ваш email"
+          password: "Пароль"
+          remember_me: "Запомнить меня"
+          password_confirmation: "Подтверждение пароля"
+        edit:
+          email: "Ваш email"
+          password: "Новый пароль"
+          password_confirmation: "Подтверждение нового пароля"
+          current_password: "Ваш текущий пароль"
+      article:
+        new:
+          title: "Заголовок"
+          content: "Текст статьи"
+        edit:
+          title: "Заголовок"
+          content: "Текст статьи"
+      photo:
+        new:
+          description: "Описание"
+          image: "Путь к изображению"
+        edit:
+          description: "Описание"
+      album:
+        new:
+          name: "Имя"
+          description: "Описание"
+        edit:
+          name: "Имя"
+          description: "Описание"
+      contact:
+        edit:
+          chirch_name: "Имя церкви"
+          phone: "Телефон церкви"
+          address: "Адрес церкви"
+          latitude: "Широта, на которой находится церковь"
+          longitude: "Долгота, на которой находится церковь"
+      welcome_message:
+        edit:
+          content: "Основной текст"
+      sermon:
+        new:
+          title: "Название проведенной проповеди"
+          recorded_date: "Дата записи"
+          record: "Аудиозапись"
+          preacher: "ФИО проповедника"
+        edit:
+          title: "Название проведенной проповеди"
+          recorded_date: "Дата записи"
+          preacher: "ФИО проповедника"
+    required:
+      text: "Обязательное поле"
+      mark: "*"
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Возникли следующие ошибки:"
+    # Labels and hints examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+
+
